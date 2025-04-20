@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hacker Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #010b15;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background: #000;
+      padding: 1rem 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav h1 {
+      color: cyan;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: #aaa;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: cyan;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5rem 10% 3rem;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid cyan;
+      box-shadow: 0 0 20px cyan;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      color: cyan;
+    }
+
+    .hero p {
+      color: #ccc;
+      max-width: 600px;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .hero button {
+      margin-top: 2rem;
+      background: cyan;
+      color: #000;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #00dddd;
+    }
+
+    section {
+      padding: 4rem 10%;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: cyan;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid cyan;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* Experience & Services */
+    .experience-section {
+      padding: 4rem 10%;
+      background: #020d18;
+      text-align: center;
+    }
+
+    .experience-highlight {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: cyan;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px cyan;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .service-tile {
+      background: linear-gradient(145deg, #011526, #062e43);
+      border: 1px solid cyan;
+      border-radius: 15px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      transition: 0.3s;
+    }
+
+    .service-tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px cyan;
+    }
+
+    .service-tile h4 {
+      color: cyan;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-tile p {
+      color: #bbb;
+      font-size: 0.95rem;
+    }
+
+    /* Glowing title */
+    .glowing-title {
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .glowing-title h2 {
+      font-size: 3rem;
+      color: cyan;
+      animation: glowing 1.5s infinite alternate;
+    }
+
+    .glowing-title p {
+      color: #ccc;
+      max-width: 600px;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    @keyframes glowing {
+      0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+      50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+      100% { text-shadow: 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000; }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 3rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Ox_Evil</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero" id="about">
+    <img src="https://static.vecteezy.com/system/resources/previews/022/257/728/original/creative-hacker-logo-templates-design-silhouette-of-a-character-in-hoodie-free-vector.jpg" alt="Profile Image">
+    <h2>Hello, I'm Luis.virus | Penetration Tester | Security Enthusiast |</h2>
+    <p>I specialize in penetration testing, web and network security, vulnerability discovery, and exploit development. Obsessed with building Python tools and digging into x86 assembly. Security is my playground.</p>
+    <button>More About Me</button>
+  </div>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h3>My Skills</h3>
+    <div class="skills-grid">
+      <div class="skill">Python</div>
+      <div class="skill">Linux</div>
+      <div class="skill">Nmap</div>
+      <div class="skill">Burp Suite</div>
+      <div class="skill">Wireshark</div>
+      <div class="skill">x86 Assembly</div>
+      <div class="skill">TCP/IP</div>
+      <div class="skill">Web Exploitation</div>
+    </div>
+  </section>
+
+  <!-- Experience & Services -->
+  <section class="experience-section" id="experience">
+    <div class="experience-highlight">2+ Years of Experience</div>
+    <div class="services-grid">
+      <div class="service-tile">
+        <h4>Penetration Testing</h4>
+        <p>Network, WiFi, Web app & server-side testing with custom tools and methodologies.</p>
+      </div>
+      <div class="service-tile">
+        <h4>Tool Development</h4>
+        <p>Python-based scripts for automation, scanning, and reverse shells.</p>
+      </div>
+      <div class="service-tile">
+        <h4>Exploit Research</h4>
+        <p>Deep dive into vulnerabilities, CVEs, and x86-level memory exploitation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glowing Title Section -->
+  <div class="glowing-title">
+    <h2>My Cyber-Sec Journey</h2>
+    <section class="experience-section" id="experience">
+   
+        <div class="services-grid">
+          <div class="service-tile">
+            <h4>Tryhackme Cyber Security Training </h4>
+            <p>Completion of the Cyber Security Roadmap</p>
+          </div>
+          <div class="service-tile">
+            <h4>PEH (Practical Ethical Hacker)</h4>
+            <p>Completion of PEH by TCM security </p>
+          </div>
+          
+        </div>
+      </section>
+  </div>
+
+</body>
+</html>
